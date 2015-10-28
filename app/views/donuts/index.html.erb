@@ -1,0 +1,18 @@
+<h1>Our Donuts</h1>
+<div class="row">
+<% @donuts.each do |donut| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<%= donut.image %>">
+      <div class="caption">
+        <h3><%= donut.name %></h3>
+        <h3>Cost: $<%= donut.cost %></h3>
+        <%= link_to "More Info", donut, class: "btn btn-default" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<br>
+<%= link_to 'New Donut', new_donut_path, class: "btn btn-primary" %>

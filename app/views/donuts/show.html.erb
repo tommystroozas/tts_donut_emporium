@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <center>
+    <h1><strong><%= @donut.name %></strong></h1>
+    <img src="<%= @donut.image %>">
+  </center>
+  <h3><strong>Filling:</strong> <%= @donut.filling %></h3>
+  <h3><strong>Topping:</strong> <%= @donut.topping %></h3>
+  <h3><strong>Extras:</strong> <%= @donut.extras %></h3>
+  <h3><strong>Cost:</strong> $<%= @donut.cost %></h3>
+</div>
+
+<%= link_to 'Edit', edit_donut_path(@donut) %> |
+<%= link_to 'Back', donuts_path %>
